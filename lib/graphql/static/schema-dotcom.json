@@ -8666,6 +8666,14 @@
           "href": "/graphql/reference/scalars#boolean"
         },
         {
+          "name": "blocksCreations",
+          "description": "<p>Is branch creation a protected operation.</p>",
+          "type": "Boolean!",
+          "id": "boolean",
+          "kind": "scalars",
+          "href": "/graphql/reference/scalars#boolean"
+        },
+        {
           "name": "branchProtectionRuleConflicts",
           "description": "<p>A list of conflicts matching branches protection rule and other branch protection rules.</p>",
           "type": "BranchProtectionRuleConflictConnection!",
@@ -23796,6 +23804,11 @@
           "href": "/graphql/reference/interfaces#projectnextowner"
         },
         {
+          "name": "ProjectV2Owner",
+          "id": "projectv2owner",
+          "href": "/graphql/reference/interfaces#projectv2owner"
+        },
+        {
           "name": "Reactable",
           "id": "reactable",
           "href": "/graphql/reference/interfaces#reactable"
@@ -33811,6 +33824,11 @@
           "href": "/graphql/reference/interfaces#projectowner"
         },
         {
+          "name": "ProjectV2Owner",
+          "id": "projectv2owner",
+          "href": "/graphql/reference/interfaces#projectv2owner"
+        },
+        {
           "name": "RepositoryDiscussionAuthor",
           "id": "repositorydiscussionauthor",
           "href": "/graphql/reference/interfaces#repositorydiscussionauthor"
@@ -39345,7 +39363,7 @@
         },
         {
           "name": "title",
-          "description": "<p>The project's name.</p>",
+          "description": "<p>The project's name. Falls back to \"Untitled table\" if blank.</p>",
           "type": "String",
           "id": "string",
           "kind": "scalars",
@@ -40392,6 +40410,11 @@
           "name": "ProjectNextOwner",
           "id": "projectnextowner",
           "href": "/graphql/reference/interfaces#projectnextowner"
+        },
+        {
+          "name": "ProjectV2Owner",
+          "id": "projectv2owner",
+          "href": "/graphql/reference/interfaces#projectv2owner"
         },
         {
           "name": "Reactable",
@@ -45295,6 +45318,14 @@
         {
           "name": "allowsForcePushes",
           "description": "<p>Are force pushes allowed on this branch.</p>",
+          "type": "Boolean!",
+          "id": "boolean",
+          "kind": "scalars",
+          "href": "/graphql/reference/scalars#boolean"
+        },
+        {
+          "name": "blocksCreations",
+          "description": "<p>Can matching branches be created.</p>",
           "type": "Boolean!",
           "id": "boolean",
           "kind": "scalars",
@@ -61190,6 +61221,14 @@
           "href": "/graphql/reference/scalars#boolean"
         },
         {
+          "name": "lineCount",
+          "description": "<p>Number of lines in the file.</p>",
+          "type": "Int",
+          "id": "int",
+          "kind": "scalars",
+          "href": "/graphql/reference/scalars#int"
+        },
+        {
           "name": "mode",
           "description": "<p>Entry file mode.</p>",
           "type": "Int!",
@@ -61645,6 +61684,11 @@
           "name": "ProjectOwner",
           "id": "projectowner",
           "href": "/graphql/reference/interfaces#projectowner"
+        },
+        {
+          "name": "ProjectV2Owner",
+          "id": "projectv2owner",
+          "href": "/graphql/reference/interfaces#projectv2owner"
         },
         {
           "name": "RepositoryDiscussionAuthor",
@@ -66831,6 +66875,14 @@
           "href": "/graphql/reference/scalars#boolean"
         }
       ]
+    },
+    {
+      "name": "ProjectV2Owner",
+      "kind": "interfaces",
+      "id": "projectv2owner",
+      "href": "/graphql/reference/interfaces#projectv2owner",
+      "description": "<p>Represents an owner of a project (beta).</p>",
+      "fields": []
     },
     {
       "name": "Reactable",
@@ -75956,6 +76008,14 @@
           "href": "/graphql/reference/scalars#boolean"
         },
         {
+          "name": "blocksCreations",
+          "description": "<p>Is branch creation a protected operation.</p>",
+          "type": "Boolean",
+          "id": "boolean",
+          "kind": "scalars",
+          "href": "/graphql/reference/scalars#boolean"
+        },
+        {
           "name": "bypassForcePushActorIds",
           "description": "<p>A list of User or Team IDs allowed to bypass force push targeting matching branches.</p>",
           "type": "[ID!]",
@@ -81095,6 +81155,14 @@
           "href": "/graphql/reference/scalars#string"
         },
         {
+          "name": "skipReleases",
+          "description": "<p>Whether to skip migrating releases for the repository.</p>",
+          "type": "Boolean",
+          "id": "boolean",
+          "kind": "scalars",
+          "href": "/graphql/reference/scalars#boolean"
+        },
+        {
           "name": "sourceId",
           "description": "<p>The ID of the Octoshift migration source.</p>",
           "type": "ID!",
@@ -81628,6 +81696,14 @@
         {
           "name": "allowsForcePushes",
           "description": "<p>Are force pushes allowed on this branch.</p>",
+          "type": "Boolean",
+          "id": "boolean",
+          "kind": "scalars",
+          "href": "/graphql/reference/scalars#boolean"
+        },
+        {
+          "name": "blocksCreations",
+          "description": "<p>Is branch creation a protected operation.</p>",
           "type": "Boolean",
           "id": "boolean",
           "kind": "scalars",

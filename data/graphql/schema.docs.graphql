@@ -1717,6 +1717,11 @@ type BranchProtectionRule implements Node {
   allowsForcePushes: Boolean!
 
   """
+  Is branch creation a protected operation.
+  """
+  blocksCreations: Boolean!
+
+  """
   A list of conflicts matching branches protection rule and other branch protection rules
   """
   branchProtectionRuleConflicts(
@@ -5564,6 +5569,11 @@ input CreateBranchProtectionRuleInput {
   Are force pushes allowed on this branch.
   """
   allowsForcePushes: Boolean
+
+  """
+  Is branch creation a protected operation.
+  """
+  blocksCreations: Boolean
 
   """
   A list of User or Team IDs allowed to bypass force push targeting matching branches.
@@ -14643,7 +14653,7 @@ union IpAllowListOwner = App | Enterprise | Organization
 """
 An Issue is a place to discuss ideas, enhancements, tasks, and bugs for a project.
 """
-type Issue implements Assignable & Closable & Comment & Labelable & Lockable & Node & ProjectNextOwner & Reactable & RepositoryNode & Subscribable & UniformResourceLocatable & Updatable & UpdatableComment {
+type Issue implements Assignable & Closable & Comment & Labelable & Lockable & Node & ProjectNextOwner & ProjectV2Owner & Reactable & RepositoryNode & Subscribable & UniformResourceLocatable & Updatable & UpdatableComment {
   """
   Reason that the conversation was locked.
   """
@@ -23594,7 +23604,7 @@ type OrgUpdateMemberRepositoryInvitationPermissionAuditEntry implements AuditEnt
 """
 An account on GitHub, with one or more owners, that has repositories, members and teams.
 """
-type Organization implements Actor & MemberStatusable & Node & PackageOwner & ProfileOwner & ProjectNextOwner & ProjectOwner & RepositoryDiscussionAuthor & RepositoryDiscussionCommentAuthor & RepositoryOwner & Sponsorable & UniformResourceLocatable {
+type Organization implements Actor & MemberStatusable & Node & PackageOwner & ProfileOwner & ProjectNextOwner & ProjectOwner & ProjectV2Owner & RepositoryDiscussionAuthor & RepositoryDiscussionCommentAuthor & RepositoryOwner & Sponsorable & UniformResourceLocatable {
   """
   Determine if this repository owner has any items that can be pinned to their profile.
   """
@@ -27373,7 +27383,7 @@ type ProjectNext implements Closable & Node & Updatable {
   shortDescription: String
 
   """
-  The project's name.
+  The project's name. Falls back to "Untitled table" if blank.
   """
   title: String
 
@@ -28117,6 +28127,13 @@ enum ProjectTemplate {
 }
 
 """
+Represents an owner of a project (beta).
+"""
+interface ProjectV2Owner {
+  id: ID!
+}
+
+"""
 A view within a Project.
 """
 type ProjectView implements Node {
@@ -28319,7 +28336,7 @@ type PublicKeyEdge {
 """
 A repository pull request.
 """
-type PullRequest implements Assignable & Closable & Comment & Labelable & Lockable & Node & ProjectNextOwner & Reactable & RepositoryNode & Subscribable & UniformResourceLocatable & Updatable & UpdatableComment {
+type PullRequest implements Assignable & Closable & Comment & Labelable & Lockable & Node & ProjectNextOwner & ProjectV2Owner & Reactable & RepositoryNode & Subscribable & UniformResourceLocatable & Updatable & UpdatableComment {
   """
   Reason that the conversation was locked.
   """
@@ -32265,6 +32282,11 @@ type RefUpdateRule {
   Are force pushes allowed on this branch.
   """
   allowsForcePushes: Boolean!
+
+  """
+  Can matching branches be created.
+  """
+  blocksCreations: Boolean!
 
   """
   Identifies the protection rule pattern.
@@ -41528,6 +41550,11 @@ input StartRepositoryMigrationInput {
   repositoryName: String!
 
   """
+  Whether to skip migrating releases for the repository.
+  """
+  skipReleases: Boolean
+
+  """
   The ID of the Octoshift migration source.
   """
   sourceId: ID! @possibleTypes(concreteTypes: ["MigrationSource"])
@@ -44359,6 +44386,11 @@ type TreeEntry {
   isGenerated: Boolean!
 
   """
+  Number of lines in the file.
+  """
+  lineCount: Int
+
+  """
   Entry file mode.
   """
   mode: Int!
@@ -44974,6 +45006,11 @@ input UpdateBranchProtectionRuleInput {
   Are force pushes allowed on this branch.
   """
   allowsForcePushes: Boolean
+
+  """
+  Is branch creation a protected operation.
+  """
+  blocksCreations: Boolean
 
   """
   The global relay id of the branch protection rule to be updated.
@@ -47215,7 +47252,7 @@ type UpdateTopicsPayload {
 """
 A user is an individual's account on GitHub that owns repositories and can make new content.
 """
-type User implements Actor & Node & PackageOwner & ProfileOwner & ProjectNextOwner & ProjectOwner & RepositoryDiscussionAuthor & RepositoryDiscussionCommentAuthor & RepositoryOwner & Sponsorable & UniformResourceLocatable {
+type User implements Actor & Node & PackageOwner & ProfileOwner & ProjectNextOwner & ProjectOwner & ProjectV2Owner & RepositoryDiscussionAuthor & RepositoryDiscussionCommentAuthor & RepositoryOwner & Sponsorable & UniformResourceLocatable {
   """
   Determine if this repository owner has any items that can be pinned to their profile.
   """
