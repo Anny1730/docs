@@ -1,6 +1,6 @@
 ---
-title: Blocking Users
-intro: ''
+title: Blocking users
+intro: Use the REST API to manage blocked users.
 versions:
   fpt: '*'
   ghec: '*'
@@ -9,3 +9,7 @@ topics:
 miniTocMaxHeadingLevel: 3
 allowTitleToDifferFromFilename: true
 ---
+
+## About blocking users
+
+{% data reusables.user-settings.user-api %}

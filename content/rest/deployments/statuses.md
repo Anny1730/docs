@@ -1,6 +1,6 @@
 ---
-title: Deployment Statuses
-intro: ''
+title: Deployment statuses
+intro: Use the REST API to manage deployment statuses.
 versions:
   fpt: '*'
   ghes: '*'
@@ -11,3 +11,4 @@ topics:
 miniTocMaxHeadingLevel: 3
 allowTitleToDifferFromFilename: true
 ---
+

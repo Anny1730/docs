@@ -4,11 +4,11 @@ import { Operation } from 'components/rest/types'
 import { RestReferencePage } from 'components/rest/RestReferencePage'
 import { getMainContext, MainContext, MainContextT } from 'components/context/MainContext'
 import {
-  RestContext,
-  RestContextT,
-  getRestContextFromRequest,
-  MiniTocItem,
-} from 'components/context/RestContext'
+  AutomatedPageContext,
+  AutomatedPageContextT,
+  getAutomatedPageContextFromRequest,
+} from 'components/context/AutomatedPageContext'
+import type { MiniTocItem } from 'components/context/ArticleContext'
 
 type MinitocItemsT = {
   restOperationsMiniTocItems: MiniTocItem[]
@@ -16,16 +16,16 @@ type MinitocItemsT = {
 
 type Props = {
   mainContext: MainContextT
-  restContext: RestContextT
+  automatedPageContext: AutomatedPageContextT
   restOperations: Operation[]
 }
 
-export default function SubCategory({ mainContext, restContext, restOperations }: Props) {
+export default function SubCategory({ mainContext, automatedPageContext, restOperations }: Props) {
   return (
     <MainContext.Provider value={mainContext}>
-      <RestContext.Provider value={restContext}>
+      <AutomatedPageContext.Provider value={automatedPageContext}>
         <RestReferencePage restOperations={restOperations} />
-      </RestContext.Provider>
+      </AutomatedPageContext.Provider>
     </MainContext.Provider>
   )
 }
@@ -35,16 +35,26 @@ export const getServerSideProps: GetServerSideProps<Props> = async (context) => 
   const res = context.res as any
   // e.g. the `activity` from `/en/rest/activity/events`
   const category = context.params!.category as string
-  const subCategory = context.params!.subcategory as string
+  let subCategory = context.params!.subcategory as string
   const currentVersion = context.params!.versionId as string
   const currentLanguage = req.context.currentLanguage as string
+  const allVersions = req.context.allVersions
+  const queryApiVersion = context.query.apiVersion
+  const apiVersion = allVersions[currentVersion].apiVersions.includes(queryApiVersion)
+    ? queryApiVersion
+    : allVersions[currentVersion].latestApiVersion
+  // For pages with category level only operations like /rest/billing, we set
+  // the subcategory's value to be the category for the call to getRest()
+  if (!subCategory) {
+    subCategory = category
+  }
 
-  const restOperations = (await getRest(currentVersion, category, subCategory)) || []
+  const restOperations = (await getRest(currentVersion, apiVersion, category, subCategory)) || []
 
   // Gets the miniTocItems in the article context. At this point it will only
   // include miniTocItems generated from the Markdown pages in
   // content/rest/*
-  const { miniTocItems } = getRestContextFromRequest(req)
+  const { miniTocItems } = getAutomatedPageContextFromRequest(req)
 
   // When operations exist, update the miniTocItems in the article context
   // with the list of operations in the OpenAPI.
@@ -56,6 +66,7 @@ export const getServerSideProps: GetServerSideProps<Props> = async (context) => 
     const { restOperationsMiniTocItems } = (await getRestMiniTocItems(
       category,
       subCategory,
+      apiVersion,
       restOperations,
       currentLanguage,
       currentVersion,
@@ -68,8 +79,8 @@ export const getServerSideProps: GetServerSideProps<Props> = async (context) => 
   return {
     props: {
       restOperations,
-      mainContext: getMainContext(req, res),
-      restContext: getRestContextFromRequest(req),
+      mainContext: await getMainContext(req, res),
+      automatedPageContext: getAutomatedPageContextFromRequest(req),
     },
   }
 }

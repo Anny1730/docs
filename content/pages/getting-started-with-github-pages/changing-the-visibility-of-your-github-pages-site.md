@@ -11,13 +11,15 @@ shortTitle: Change visibility of site
 
 ## About access control for {% data variables.product.prodname_pages %} sites
 
-With access control for {% data variables.product.prodname_pages %}, you can restrict access to your {% data variables.product.prodname_pages %} site by publishing the site privately. A privately published site can only be accessed by people with read access to the repository the site is published from. You can use privately published sites to share your internal documentation or knowledge base with members of your enterprise. 
+With access control for {% data variables.product.prodname_pages %}, you can restrict access to your project site by publishing the site privately. A privately published site can only be accessed by people with read access to the repository the site is published from. You can use privately published sites to share your internal documentation or knowledge base with members of your enterprise.
 
 {% data reusables.pages.privately-publish-ghec-only %}
 
-If your enterprise uses {% data variables.product.prodname_emus %}, all {% data variables.product.prodname_pages %} sites are privately published. For more information about {% data variables.product.prodname_emus %}, see "[About  {% data variables.product.prodname_emus %}](/enterprise-cloud@latest/admin/authentication/managing-your-enterprise-users-with-your-identity-provider/about-enterprise-managed-users)."
+If your enterprise uses {% data variables.product.prodname_emus %}, access control is not available, and all {% data variables.product.prodname_pages %} sites are only accessible to other enterprise members. For more information about {% data variables.product.prodname_emus %}, see "[About {% data variables.product.prodname_pages %}](/pages/getting-started-with-github-pages/about-github-pages#limitations-for-enterprise-managed-users)."
 
-If your organization uses {% data variables.product.prodname_ghe_cloud %} without {% data variables.product.prodname_emus %}, you can choose to publish your sites privately or publicly to anyone on the internet. Access control is available for project sites that are published from a private or internal repository that are owned by the organization. You cannot manage access control for an organization site. For more information about the types of {% data variables.product.prodname_pages %} sites, see "[About {% data variables.product.prodname_pages %}](/pages/getting-started-with-github-pages/about-github-pages#types-of-github-pages-sites)."
+If your organization uses {% data variables.product.prodname_ghe_cloud %} without {% data variables.product.prodname_emus %}, you can choose to publish your project sites privately or publicly to anyone on the internet.
+
+Access control is available for project sites that are published from a private or internal repository that are owned by the organization. You cannot manage access control for an organization site. For more information about the types of {% data variables.product.prodname_pages %} sites, see "[About {% data variables.product.prodname_pages %}](/pages/getting-started-with-github-pages/about-github-pages#types-of-github-pages-sites)."
 
 ## About subdomains for privately published sites
 
@@ -37,8 +39,8 @@ To use a shorter and more memorable domain for your privately published site, yo
 {% data reusables.pages.sidebar-pages %}
 3. Under "{% data variables.product.prodname_pages %}", select the **{% data variables.product.prodname_pages %} visibility** drop-down menu, then click a visibility.
    ![Drop-down to choose a visibility for your site](/assets/images/help/pages/public-or-private-visibility.png)
-4. To see your published site, under "{% data variables.product.prodname_pages %}", click your site's URL.
-![URL of your privately published site](/assets/images/help/pages/click-private-pages-url-to-preview.png)
+4. To see your published site, under "{% data variables.product.prodname_pages %}", click **{% octicon "link-external" aria-label="The external link icon" %} Visit site**.
+   ![Screenshot of the "Visit site" button next to the URL of a privately published site](/assets/images/help/pages/click-private-pages-url-to-preview.png)
 
   {% note %}
 

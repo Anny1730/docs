@@ -1,6 +1,8 @@
 ---
-title: Projects
-intro: 'The Projects API lets you create, list, update, delete and customize projects in a repository.'
+title: '{% data variables.product.prodname_projects_v1_caps %}'
+shortTitle: Boards
+allowTitleToDifferFromFilename: true
+intro: 'Use the REST API to create and manage {% data variables.projects.projects_v1_boards %} in a repository.'
 versions:
   fpt: '*'
   ghes: '*'
@@ -10,3 +12,7 @@ topics:
   - API
 miniTocMaxHeadingLevel: 3
 ---
+
+{% data reusables.projects.projects-api %}
+
+{% data reusables.user-settings.classic-projects-api-classic-pat-only %}

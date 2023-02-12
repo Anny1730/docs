@@ -1,9 +1,11 @@
 ---
-title: Autolinks
-intro: 'To help streamline your workflow, you can use the API to add autolinks to external resources like JIRA issues and Zendesk tickets.'
+title: Repository autolinks
+allowTitleToDifferFromFilename: true
+shortTitle: Autolinks
+intro: Use the REST API to add autolinks to external resources.
 versions:
   fpt: '*'
-  ghes: '>=3.3'
+  ghes: '*'
   ghae: '*'
   ghec: '*'
 topics:
@@ -11,6 +13,8 @@ topics:
 miniTocMaxHeadingLevel: 3
 ---
 
-For more information, see "[Configuring autolinks to reference external resources](/github/administering-a-repository/configuring-autolinks-to-reference-external-resources)."
+## About repository autolinks
 
-{% data variables.product.prodname_github_apps %} require repository administration permissions with read or write access to use the Autolinks API.
+To help streamline your workflow, you can use the REST API to add autolinks to external resources like JIRA issues and Zendesk tickets. For more information, see "[Configuring autolinks to reference external resources](/github/administering-a-repository/configuring-autolinks-to-reference-external-resources)."
+
+{% data variables.product.prodname_github_apps %} require repository administration permissions with read or write access to use these endpoints.

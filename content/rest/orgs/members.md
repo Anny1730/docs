@@ -1,6 +1,8 @@
 ---
-title: Members
-intro: ''
+title: Organization members
+allowTitleToDifferFromFilename: true
+shortTitle: Members
+intro: Use the REST API to manage memberships in your organization.
 versions:
   fpt: '*'
   ghes: '*'
@@ -10,3 +12,4 @@ topics:
   - API
 miniTocMaxHeadingLevel: 3
 ---
+

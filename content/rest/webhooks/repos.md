@@ -1,6 +1,6 @@
 ---
 title: Repository Webhooks
-intro: ''
+intro: Use the REST API to manage repository webhooks.
 versions:
   fpt: '*'
   ghes: '*'
@@ -11,3 +11,4 @@ topics:
 miniTocMaxHeadingLevel: 3
 allowTitleToDifferFromFilename: true
 ---
+

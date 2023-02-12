@@ -1,6 +1,6 @@
 ---
 title: Gists
-intro: 'The Gists API enables the authorized user to list, create, update and delete the public gists on GitHub.'
+intro: 'Use the REST API to list, create, update and delete the public gists on GitHub.'
 versions:
   fpt: '*'
   ghes: '*'
@@ -11,6 +11,10 @@ topics:
 miniTocMaxHeadingLevel: 3
 ---
 
+## About gists
+
+You can use the REST API to view and modify gists. For more information about gists, see "[Editing and sharing content with gists](/get-started/writing-on-github/editing-and-sharing-content-with-gists)."
+
 ### Authentication
 
 You can read public gists {% ifversion ghae or ghes %}and create them for anonymous users without a token.{% else %} anonymously, but you must be signed into GitHub to create gists.{% endif %} To read or write gists on a user's behalf, you need the gist OAuth scope and a token. For more information, see "[Scopes for OAuth Apps](/developers/apps/scopes-for-oauth-apps)."
@@ -19,7 +23,7 @@ You can read public gists {% ifversion ghae or ghes %}and create them for anonym
 
 ### Truncation
 
-The Gist API provides up to one megabyte of content for each file in the gist. Each file returned for a gist through the API has a key called `truncated`. If `truncated` is `true`, the file is too large and only a portion of the contents were returned in `content`.
+The API provides up to one megabyte of content for each file in the gist. Each file returned for a gist through the API has a key called `truncated`. If `truncated` is `true`, the file is too large and only a portion of the contents were returned in `content`.
 
 If you need the full contents of the file, you can make a `GET` request to the URL specified by `raw_url`. Be aware that for files larger than ten megabytes, you'll need to clone the gist via the URL provided by `git_pull_url`.
 
@@ -29,7 +33,7 @@ In addition to a specific file's contents being truncated, the entire files list
 
 These are the supported media types for fetching gist contents.
 
-    application/vnd.github.VERSION.raw
-    application/vnd.github.VERSION.base64
+    application/vnd.github.raw
+    application/vnd.github.base64
 
 For more information, see "[Media types](/rest/overview/media-types)."

@@ -1,6 +1,6 @@
 ---
-title: Source Imports
-intro: '{% data variables.migrations.source_imports_intro %}'
+title: Source imports
+intro: 'Use the REST API to start an import from a Git, Subversion, Mercurial, or Team Foundation Version Control source repository.'
 versions:
   fpt: '*'
   ghec: '*'
@@ -9,9 +9,13 @@ topics:
 miniTocMaxHeadingLevel: 3
 ---
 
-A typical source import would start the import and then (optionally) update the authors and/or update the preference for using Git LFS if large files exist in the import. You can also create a webhook that listens for the [`RepositoryImportEvent`](/developers/webhooks-and-events/webhook-events-and-payloads#repository_import) to find out the status of the import.
+## About source imports
 
-A more detailed example can be seen in this diagram:
+{% data reusables.user-settings.imports-api-classic-pat-only %}
+
+{% data variables.migrations.source_imports_intro %} A typical source import would start the import and then (optionally) update the authors and/or update the preference for using Git LFS if large files exist in the import. You can also create a webhook that listens for the [`RepositoryImportEvent`](/developers/webhooks-and-events/webhook-events-and-payloads#repository_import) to find out the status of the import.
+
+The following diagram provides a more detailed example:
 
 ```
 +---------+                     +--------+                              +---------------------+

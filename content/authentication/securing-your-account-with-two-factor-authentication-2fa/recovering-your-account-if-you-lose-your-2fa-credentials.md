@@ -19,11 +19,17 @@ shortTitle: Recover an account with 2FA
 
 {% warning %}
 
-**Warnings**: 
+**Warnings**:
 
 - {% data reusables.two_fa.support-may-not-help %}
 
 {% endwarning %}
+
+{% note %}
+
+**Note:** {% data reusables.two_fa.unlink-email-address %}
+
+{% endnote %}
 
 {% endif %}
 
@@ -36,7 +42,7 @@ Use one of your recovery codes to automatically regain entry into your account. 
     {% warning %}
 
     **Warning**: {% data reusables.accounts.you-must-know-your-password %}
-    
+
     {% endwarning %}
 
 {% ifversion fpt or ghec %}
@@ -54,7 +60,7 @@ Use one of your recovery codes to automatically regain entry into your account. 
 {% ifversion fpt or ghec %}
 ## Authenticating with a fallback number
 
-If you lose access to your primary TOTP app or phone number, you can provide a two-factor authentication code sent to your fallback number to automatically regain access to your account.
+If you lose access to your preferred TOTP app or phone number, you can provide a two-factor authentication code sent to your fallback number to automatically regain access to your account.
 {% endif %}
 
 ## Authenticating with a security key
@@ -62,9 +68,9 @@ If you lose access to your primary TOTP app or phone number, you can provide a t
 If you configured two-factor authentication using a security key, you can use your security key as a secondary authentication method to automatically regain access to your account. For more information, see "[Configuring two-factor authentication](/authentication/securing-your-account-with-two-factor-authentication-2fa/configuring-two-factor-authentication#configuring-two-factor-authentication-using-a-security-key)."
 
 {% ifversion fpt or ghec %}
-## Authenticating with a verified device, SSH token, or personal access token
+## Authenticating with a verified device, SSH token, or {% data variables.product.pat_generic %}
 
-If you know your password for {% data variables.product.product_location %} but don't have the two-factor authentication credentials or your two-factor authentication recovery codes, you can have a one-time password sent to your verified email address to begin the verification process and regain access to your account.
+If you know your password for {% data variables.location.product_location %} but don't have the two-factor authentication credentials or your two-factor authentication recovery codes, you can have a one-time password sent to your verified email address to begin the verification process and regain access to your account.
 
 {% note %}
 
@@ -79,7 +85,7 @@ You can use your two-factor authentication credentials or two-factor authenticat
     {% warning %}
 
     **Warning**: {% data reusables.accounts.you-must-know-your-password %}
-    
+
     {% endwarning %}
 1. Under "Having problems?", click **Use a recovery code or request a reset**.
 
@@ -102,7 +108,7 @@ You can use your two-factor authentication credentials or two-factor authenticat
 1. Choose an alternative verification factor.
     - If you've used your current device to log into this account before and would like to use the device for verification, click **Verify with this device**.
     - If you've previously set up an SSH key on this account and would like to use the SSH key for verification, click **SSH key**.
-    - If you've previously set up a personal access token and would like to use the personal access token for verification, click **Personal access token**.
+    - If you've previously set up a {% data variables.product.pat_generic %} and would like to use the {% data variables.product.pat_generic %} for verification, click **{% data variables.product.pat_generic_caps %}**.
 
    ![Screenshot of buttons for alternative verification](/assets/images/help/2fa/alt-verifications.png)
 1. A member of {% data variables.contact.github_support %} will review your request and email you within three business days. If your request is approved, you'll receive a link to complete your account recovery process. If your request is denied, the email will include a way to contact support with any additional questions.

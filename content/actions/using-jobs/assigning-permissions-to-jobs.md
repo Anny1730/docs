@@ -1,6 +1,6 @@
 ---
 title: Assigning permissions to jobs
-shortTitle: Assigning permissions to jobs
+shortTitle: Assign permissions to jobs
 intro: Modify the default permissions granted to `GITHUB_TOKEN`.
 versions:
   fpt: '*'
@@ -20,3 +20,7 @@ miniTocMaxHeadingLevel: 4
 ## Assigning permissions to a specific job
 
 {% data reusables.actions.jobs.section-assigning-permissions-to-jobs-specific %}
+
+### Example: Setting permissions for a specific job
+
+{% data reusables.actions.jobs.setting-permissions-specific-jobs-example %}

@@ -1,6 +1,6 @@
 ---
 title: Check Runs
-intro: ''
+intro: Use the REST API to manage check runs.
 versions:
   fpt: '*'
   ghes: '*'
@@ -11,3 +11,4 @@ topics:
 miniTocMaxHeadingLevel: 3
 allowTitleToDifferFromFilename: true
 ---
+

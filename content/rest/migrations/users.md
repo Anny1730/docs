@@ -1,17 +1,21 @@
 ---
-title: Users
-intro: 'The Users migrations API is only available to authenticated account owners.'
+title: User migrations
+allowTitleToDifferFromFilename: true
+shortTitle: Users
+intro: 'Use the REST API to review, backup, or migrate your user data stored on {% data variables.product.product_name %}.com.'
 versions:
   fpt: '*'
   ghec: '*'
-  ghes: '>3.3'
+  ghes: '*'
   ghae: '*'
 topics:
   - API
 miniTocMaxHeadingLevel: 3
 ---
 
-For more information, see "[Other authentication methods](/rest/overview/other-authentication-methods)."
+## About user migrations
+
+These endpoints are only available to authenticated account owners. For more information, see "[Other authentication methods](/rest/overview/other-authentication-methods)".
 
 {% data variables.migrations.user_migrations_intro %} For a list of migration data that you can download, see "[Download a user migration archive](#download-a-user-migration-archive)."
 

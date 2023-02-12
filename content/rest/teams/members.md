@@ -1,6 +1,8 @@
 ---
-title: Members
-intro: ''
+title: Team members
+intro: 'Use the REST API to create and manage membership of teams in your {% data variables.product.product_name %} organization.'
+allowTitleToDifferFromFilename: true
+shortTitle: Members
 versions:
   fpt: '*'
   ghes: '*'
@@ -11,12 +13,14 @@ topics:
 miniTocMaxHeadingLevel: 3
 ---
 
-This API is only available to authenticated members of the team's organization. OAuth access tokens require the `read:org` [scope](/apps/building-oauth-apps/understanding-scopes-for-oauth-apps/).
+## About team members
+
+{% data reusables.organizations.team-api %}
 
 {% ifversion fpt or ghes or ghec %}
 {% note %}
 
-**Note:** When you have team synchronization set up for a team with your organization's identity provider (IdP), you will see an error if you attempt to use the API for making changes to the team's membership. If you have access to manage group membership in your IdP, you can manage GitHub team membership through your identity provider, which automatically adds and removes team members in an organization. For more information, see "<a href="/organizations/managing-saml-single-sign-on-for-your-organization/managing-team-synchronization-for-your-organization" class="dotcom-only">Synchronizing teams between your identity provider and GitHub</a>."
+**Note:** When you have team synchronization set up for a team with your organization's identity provider (IdP), you will see an error if you attempt to use the API to make changes to the team's membership. If you have access to manage group membership in your IdP, you can manage GitHub team membership through your identity provider, which automatically adds and removes team members in an organization. For more information, see "[Synchronizing teams between your identity provider and GitHub](/enterprise-cloud@latest/organizations/managing-saml-single-sign-on-for-your-organization/managing-team-synchronization-for-your-organization)."
 
 {% endnote %}
 

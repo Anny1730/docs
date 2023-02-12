@@ -1,6 +1,6 @@
 ---
 title: Inviting people to manage your enterprise
-intro: 'You can {% ifversion ghec %}invite people to become enterprise owners or billing managers for{% elsif ghes %}add enterprise owners to{% endif %} your enterprise account. You can also remove enterprise owners {% ifversion ghec %}or billing managers {% endif %}who no longer need access to the enterprise account.'
+intro: 'You can {% ifversion ghec %}invite{% else %}add{% endif %} and remove enterprise owners{% ifversion ghec %} and billing managers{% endif %} for your enterprise account.'
 permissions: 'Enterprise owners can {% ifversion ghec %}invite other people to become{% elsif ghes %}add{% endif %} additional enterprise administrators.'
 redirect_from:
   - /github/setting-up-and-managing-your-enterprise/managing-users-in-your-enterprise/inviting-people-to-manage-your-enterprise
@@ -45,7 +45,7 @@ If your enterprise uses {% data variables.product.prodname_emus %}, enterprise o
 
 {% ifversion ghec %}After you invite someone to join the enterprise account, they must accept the emailed invitation before they can access the enterprise account. Pending invitations will expire after 7 days.{% endif %}
 
-{% if enterprise-membership-view-improvements %}
+{% ifversion enterprise-membership-view-improvements %}
 You can see all pending invitations to become an administrator of your enterprise account. For more information, see "[Viewing people in your enterprise](/admin/user-management/managing-users-in-your-enterprise/viewing-people-in-your-enterprise#viewing-pending-invitations)."
 {% endif %}
 

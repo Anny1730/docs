@@ -1,6 +1,6 @@
 ---
 title: Creating PostgreSQL service containers
-shortTitle: PostgreSQL service containers
+shortTitle: Create PostgreSQL service containers
 intro: You can create a PostgreSQL service container to use in your workflow. This guide shows examples of creating a PostgreSQL service for jobs that run in containers or directly on the runner machine.
 redirect_from:
   - /actions/automating-your-workflow-with-github-actions/creating-postgresql-service-containers
@@ -91,7 +91,7 @@ jobs:
           POSTGRES_PORT: 5432
 ```
 
-### Configuring the runner job
+### Configuring the runner job for jobs in containers
 
 {% data reusables.actions.service-container-host %}
 
@@ -123,7 +123,7 @@ jobs:
           --health-retries 5
 ```
 
-### Configuring the steps
+### Configuring the steps for jobs in containers
 
 {% data reusables.actions.service-template-steps %}
 
@@ -213,7 +213,7 @@ jobs:
           POSTGRES_PORT: 5432
 ```
 
-### Configuring the runner job
+### Configuring the runner job for jobs directly on the runner machine
 
 {% data reusables.actions.service-container-host-runner %}
 
@@ -248,7 +248,7 @@ jobs:
           - 5432:5432
 ```
 
-### Configuring the steps
+### Configuring the steps for jobs directly on the runner machine
 
 {% data reusables.actions.service-template-steps %}
 

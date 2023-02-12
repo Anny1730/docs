@@ -1,6 +1,6 @@
 ---
 title: Emojis
-intro: 'With the Emojis API, you can list and view all the available emojis to use in {% data variables.product.product_name %}.'
+intro: 'Use the REST API to list and view all the available emojis to use on {% data variables.product.product_name %}.'
 versions:
   fpt: '*'
   ghes: '*'
@@ -12,3 +12,4 @@ miniTocMaxHeadingLevel: 3
 redirect_from:
   - /rest/reference/emojis
 ---
+

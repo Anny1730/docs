@@ -1,6 +1,6 @@
 ---
-title: Codes of Conduct
-intro: ''
+title: Codes of conduct
+intro: Use the REST API to get information about codes of conduct.
 versions:
   fpt: '*'
   ghes: '*'
@@ -13,4 +13,3 @@ redirect_from:
   - /rest/reference/codes-of-conduct
 ---
 
-You can use the Codes of Conduct API to retrieve information about a repository's code of conduct. To get a repository's code of conduct, use the "[Get a repository](/rest/reference/repos#get-a-repository)" endpoint.

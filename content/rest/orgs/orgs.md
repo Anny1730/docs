@@ -1,6 +1,6 @@
 ---
 title: Organizations
-intro: ''
+intro: Use the REST API to interact with organizations.
 versions:
   fpt: '*'
   ghes: '*'
@@ -11,3 +11,4 @@ topics:
 miniTocMaxHeadingLevel: 3
 allowTitleToDifferFromFilename: true
 ---
+

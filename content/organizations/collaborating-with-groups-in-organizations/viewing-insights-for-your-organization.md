@@ -1,12 +1,10 @@
 ---
 title: Viewing insights for your organization
 intro: 'Organization insights provide data about your organization''s activity, contributions, and dependencies.'
-product: '{% data reusables.gated-features.org-insights %}'
 redirect_from:
   - /articles/viewing-insights-for-your-organization
   - /github/setting-up-and-managing-organizations-and-teams/viewing-insights-for-your-organization
 versions:
-  fpt: '*'
   ghec: '*'
 topics:
   - Organizations
@@ -15,13 +13,15 @@ shortTitle: View organization insights
 permissions: Organization members can view organization insights.
 ---
 
-You can use organization activity insights to help you better understand how members of your organization are using {% data variables.product.product_name %} to collaborate and work on code. Dependency insights can help you track, report, and act on your organization's open source usage.
-
 {% note %}
 
 **Note:** To view organization insights, your organization must use {% data variables.product.prodname_ghe_cloud %}. {% data reusables.enterprise.link-to-ghec-trial %}
 
 {% endnote %}
+
+## About organization insights
+
+You can use organization activity insights to help you better understand how members of your organization are using {% data variables.product.product_name %} to collaborate and work on code. Dependency insights can help you track, report, and act on your organization's open source usage.
 
 ## Viewing organization activity insights
 

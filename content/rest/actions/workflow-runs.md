@@ -1,6 +1,6 @@
 ---
 title: Workflow runs
-intro: 'The Workflow Runs API allows you to view, re-run, cancel, and view logs for workflow runs.'
+intro: 'Use the REST API to interact with workflow runs in {% data variables.product.prodname_actions %}.'
 topics:
   - API
 versions:
@@ -10,6 +10,8 @@ versions:
   ghec: '*'
 ---
 
-{% data reusables.actions.about-workflow-runs %} For more information, see "[Managing a workflow run](/actions/automating-your-workflow-with-github-actions/managing-a-workflow-run)."
+## About workflow runs in {% data variables.product.prodname_actions %}
+
+You can use the REST API to view, re-run, cancel, and view logs for workflow runs in {% data variables.product.prodname_actions %}. {% data reusables.actions.about-workflow-runs %} For more information, see "[Managing a workflow run](/actions/automating-your-workflow-with-github-actions/managing-a-workflow-run)."
 
 {% data reusables.actions.actions-authentication %} {% data reusables.actions.actions-app-actions-permissions-api %}

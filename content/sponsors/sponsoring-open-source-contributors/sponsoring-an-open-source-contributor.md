@@ -17,6 +17,8 @@ topics:
 shortTitle: Sponsor a contributor
 ---
 
+{% data reusables.sponsors.paypal-deprecation %}
+
 {% data reusables.sponsors.org-sponsors-release-phase %}
 
 ## About sponsorships
@@ -25,7 +27,7 @@ shortTitle: Sponsor a contributor
 
 You can sponsor an account on behalf of your personal account to invest in projects that you personally benefit from. You can sponsor an account on behalf of your organization for many reasons.
 - Sustaining specific libraries that your organization's work depends on
-- Investing in the ecosystem you rely on as a organization (such as blockchain)
+- Investing in the ecosystem you rely on as an organization (such as blockchain)
 - Developing brand awareness as an organization that values open source
 - Thanking open source developers for building libraries that complement the product your organization offers
 
@@ -39,11 +41,11 @@ We may share certain limited tax information with sponsored accounts. For more i
 
 {% data reusables.sponsors.manage-updates-for-orgs %}
 
-You can choose whether to display your sponsorship publicly. One-time sponsorships remain visible for one month. 
+You can choose whether to display your sponsorship publicly. One-time sponsorships remain visible for one month.
 
 If the sponsored account retires your tier, the tier will remain in place for you until you choose a different tier or cancel your subscription. For more information, see "[Upgrading a sponsorship](/articles/upgrading-a-sponsorship)" and "[Downgrading a sponsorship](/articles/downgrading-a-sponsorship)."
 
-If the account you want to sponsor does not have a profile on {% data variables.product.prodname_sponsors %}, you can encourage the account to join. For more information, see "[Setting up {% data variables.product.prodname_sponsors %} for your personal account](/sponsors/receiving-sponsorships-through-github-sponsors/setting-up-github-sponsors-for-your-user-account)" and "[Setting up {% data variables.product.prodname_sponsors %} for your organization](/sponsors/receiving-sponsorships-through-github-sponsors/setting-up-github-sponsors-for-your-organization)."
+If the account you want to sponsor does not have a profile on {% data variables.product.prodname_sponsors %}, you can encourage the account to join. For more information, see "[Setting up {% data variables.product.prodname_sponsors %} for your personal account](/sponsors/receiving-sponsorships-through-github-sponsors/setting-up-github-sponsors-for-your-personal-account)" and "[Setting up {% data variables.product.prodname_sponsors %} for your organization](/sponsors/receiving-sponsorships-through-github-sponsors/setting-up-github-sponsors-for-your-organization)."
 
 {% data reusables.sponsors.sponsorships-not-tax-deductible %}
 

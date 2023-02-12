@@ -1,9 +1,8 @@
 ---
 title: Custom Repository Roles
-intro: ''
+intro: Use the REST API to interact with custom repository roles.
 versions:
-  fpt: '*'
-  ghes: '>=3.4'
+  ghes: '*'
   ghec: '*'
 topics:
   - API
@@ -12,3 +11,4 @@ allowTitleToDifferFromFilename: true
 redirect_from:
   - /rest/orgs/custom_roles
 ---
+

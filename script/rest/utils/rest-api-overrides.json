@@ -195,6 +195,11 @@
       "subcategory": null,
       "originalUrl": "/rest/reference/repos#get-a-dns-health-check-for-github-pages"
     },
+    "repos/create-pages-deployment": {
+      "category": "pages",
+      "subcategory": null,
+      "originalUrl": "/rest/reference/repos#create-a-github-pages-deployment"
+    },
     "repos/get-code-frequency-stats": {
       "category": "metrics",
       "subcategory": "statistics",
@@ -774,10 +779,16 @@
       "category": "orgs",
       "subcategory": "custom-roles",
       "originalUrl": "/rest/reference/orgs#list-custom-repository-roles-in-an-organization"
+    },
+    "apps/oauth-applications": {
+      "category": "apps",
+      "subcategory": "apps",
+      "originalUrl": "/rest/apps/oauth-applications#create-a-scoped-access-token"
     }
   },
   "sectionUrls": {
     "/rest/repos#deploy-keys": "/rest/deploy-keys",
-    "/rest/deployments#deploy-keys": "/rest/deploy-keys"
+    "/rest/deployments#deploy-keys": "/rest/deploy-keys",
+    "/rest/repos#statuses": "/rest/commits/statuses"
   }
 }

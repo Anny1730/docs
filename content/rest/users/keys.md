@@ -1,6 +1,6 @@
 ---
 title: Git SSH Keys
-intro: ''
+intro: Use the REST API to manage Git SSH keys of authenticated users.
 versions:
   fpt: '*'
   ghes: '*'
@@ -11,3 +11,7 @@ topics:
 miniTocMaxHeadingLevel: 3
 allowTitleToDifferFromFilename: true
 ---
+
+## About Git SSH key administration
+
+{% data reusables.user-settings.user-api %}
